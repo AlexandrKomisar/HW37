@@ -1,0 +1,65 @@
+.backfaces {
+  width: 232px;
+  height: 350px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 232px;
+  height: 350px;
+  backface-visibility: hidden;
+  transition: 0.5s;
+  position: absolute;
+}
+.back {
+  background-color: #e4dfc2;
+}
+.front {
+  background-image: url("../img/kartochnaya-rubashka_1.jpg");
+}
+.backfaces .back {
+  transform: rotateY(180deg);
+}
+
+#flip:checked + .backfaces .front {
+  transform: rotateY(180deg);
+}
+#flip:checked + .backfaces .back {
+  transform: rotateY(360deg);
+}
+.ace {
+  color: red;
+  font-size: 30px;
+  margin-block-start: 2px;
+  margin-block-end: 0;
+  margin-inline-start: 2px;
+}
+.border {
+  margin: 20px;
+  border: solid 3px #7c7979;
+  border-radius: 10px;
+  width: 185px;
+  height: 270px;
+  margin-block-start: 1px;
+  margin-block-end: 0;
+}
+.suit {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+  color: red;
+}
+.coup {
+  transform: rotateX(180deg);
+  text-align: right;
+  margin-block-start: 2px;
+  margin-block-end: 2px;
+  margin-inline-end: 2px;
+}
